@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="785.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dragon.feliz.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="PuntoDeVenta" layoutX="-6.0" prefHeight="835.0" prefWidth="850.0" style="-fx-background-color: #D85723;" visible="false">
+         <children>
+            <Button id="GenerarPedido" fx:id="BotonPuntoDeVenta" accessibleRole="INCREMENT_BUTTON" cache="true" cacheHint="ROTATE" layoutX="319.0" layoutY="558.0" mnemonicParsing="false" onAction="#AbrirPuntoDeVenta" prefHeight="25.0" prefWidth="165.0" text="Crear platillo" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fx:id="imagenPlatilloInicio" fitHeight="274.0" fitWidth="447.0" layoutX="177.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/platillo.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="NombreDelCliente" layoutX="349.0" layoutY="380.0" prefHeight="25.0" prefWidth="255.0" />
+            <Label layoutX="171.0" layoutY="380.0" prefHeight="23.0" prefWidth="165.0" text="Nombre del cliente" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="429.0" prefHeight="23.0" prefWidth="180.0" text="Cantidad de ordenes" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TotalDePlatillos" layoutX="349.0" layoutY="428.0" prefHeight="25.0" prefWidth="135.0" />
+            <Label layoutX="283.0" layoutY="22.0" prefHeight="29.0" prefWidth="192.0" text="      Dragon Feliz" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Comanda" layoutY="-6.0" prefHeight="839.0" prefWidth="844.0" style="-fx-background-color: #D85723;" visible="false">
+         <children>
+            <Label layoutX="12.0" layoutY="22.0" prefHeight="23.0" prefWidth="165.0" text="Total De Ordenes " textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CantidadDeOrdenes" editable="false" layoutX="164.0" layoutY="21.0" prefHeight="25.0" prefWidth="75.0" />
+            <Label layoutX="433.0" layoutY="22.0" prefHeight="23.0" prefWidth="231.0" text="Captura De Orden Numero" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CapturaDeOrden" editable="false" layoutX="668.0" layoutY="21.0" prefHeight="25.0" prefWidth="63.0" />
+            <RadioButton fx:id="PastaD" layoutX="164.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="154.0" text="Pasta Delgada 15$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="RadiobuttonPastaArroz" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Arroz" layoutX="319.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Arroz 10$" textFill="#0f0f0f" toggleGroup="$RadiobuttonPastaArroz">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <CheckBox fx:id="apio" layoutX="15.0" layoutY="299.0" mnemonicParsing="false" text="Apio 3$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="zanahoria" layoutX="220.0" layoutY="449.0" mnemonicParsing="false" text="Zanahoria 3.5$" textFill="#0f0f0f" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cebolla" layoutX="220.0" layoutY="299.0" mnemonicParsing="false" text="Cebolla 2$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chile" layoutX="108.0" layoutY="299.0" mnemonicParsing="false" text="Chile 2$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <Text fill="#261616" layoutX="116.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VERDURAS" textAlignment="CENTER" wrappingWidth="119.99999284744263">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Text>
+            <CheckBox fx:id="calabaza" layoutX="108.0" layoutY="449.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="Calabaza 7$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="berenjena" layoutX="220.0" layoutY="366.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="116.0" text="Berenjena 4$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="hongos" layoutX="15.0" layoutY="448.0" mnemonicParsing="false" text="Hongo 3$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="bambu" layoutX="107.0" layoutY="368.0" mnemonicParsing="false" text="Bambu 12.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="brocoli" layoutX="15.0" layoutY="368.0" mnemonicParsing="false" text="Brocoli 5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <Text layoutX="97.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOPI" textAlignment="CENTER" wrappingWidth="103.00001263618469">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="huevo" layoutX="29.0" layoutY="585.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Huevo 13$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="topi" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="aguacate" layoutX="162.0" layoutY="585.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="Aguacate 15$" textFill="#0f0f0f" toggleGroup="$topi">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <Button id="GenerarPedido" layoutX="345.0" layoutY="685.0" mnemonicParsing="false" onAction="#GenerarVenta" prefHeight="33.0" prefWidth="127.0" text="Generar Venta" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text layoutX="539.0" layoutY="224.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROTEINAS" textAlignment="CENTER" wrappingWidth="119.99998158216476">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="Camaron" layoutX="533.0" layoutY="299.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" text="Camaron 20$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Pescado" layoutX="413.0" layoutY="299.0" mnemonicParsing="false" text="Pescado 13$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Res" layoutX="655.0" layoutY="366.0" mnemonicParsing="false" text="Res 19$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Cordero" layoutX="530.0" layoutY="366.0" mnemonicParsing="false" text="Cordero 12.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Cerdo" layoutX="655.0" layoutY="299.0" mnemonicParsing="false" text="Cerdo 15$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Pollo" layoutX="413.0" layoutY="366.0" mnemonicParsing="false" text="Pollo 18.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <RadioButton fx:id="ostiones" layoutX="499.0" layoutY="494.0" mnemonicParsing="false" text="Ostiones 5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="salsa" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="anguila" layoutX="655.0" layoutY="494.0" mnemonicParsing="false" text="Anguila 6$" textFill="#0f0f0f" toggleGroup="$salsa">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <Text layoutX="595.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALSA" textAlignment="CENTER" wrappingWidth="68.00000667572021">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="Servicios" layoutX="599.0" layoutY="477.0" prefHeight="25.0" prefWidth="154.0" visible="false" />
+            <Label layoutX="514.0" layoutY="566.0" prefHeight="20.0" prefWidth="88.0" text="SERVICIO" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Button id="GenerarPedido" layoutX="581.0" layoutY="685.0" mnemonicParsing="false" onAction="#Salir" prefHeight="33.0" prefWidth="127.0" text="Salir" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <RadioButton fx:id="PastaG" layoutX="6.0" layoutY="176.0" mnemonicParsing="false" text="Pasta Gruesa 13.5$" textFill="#0f0f0f" toggleGroup="$RadiobuttonPastaArroz">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <ComboBox id="GenerarPedido" fx:id="Servicios" layoutX="607.0" layoutY="563.0" prefWidth="150.0" promptText="SERVICIOS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <Button id="GenerarPedido" fx:id="combos" layoutX="655.0" layoutY="123.0" mnemonicParsing="false" onAction="#VerCombos" prefHeight="33.0" prefWidth="102.0" text="Combos" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="61.0" fitWidth="88.0" layoutX="25.0" layoutY="115.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pasta.jpg" />
+               </image>
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="88.0" layoutX="195.0" layoutY="115.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pasta.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="77.0" fitWidth="88.0" layoutX="320.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/Arroz.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="13.0" layoutY="238.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/apio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="63.0" layoutX="117.0" layoutY="238.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/chile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="74.0" layoutX="229.0" layoutY="242.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/cebollas.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="32.0" layoutY="315.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/brocoli.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="127.0" layoutY="312.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/bambu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="88.0" layoutX="241.0" layoutY="316.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/berenjena.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="32.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/hongos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="84.0" layoutX="124.0" layoutY="390.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Calabaza.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="84.0" layoutX="241.0" layoutY="385.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/zanahoria.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="55.0" layoutY="537.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/huevos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="187.0" layoutY="524.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/aguacate.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="68.0" layoutX="666.0" layoutY="238.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/cerdo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="71.0" layoutX="558.0" layoutY="246.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/camaron.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="71.0" layoutX="438.0" layoutY="246.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pescado.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="442.0" layoutY="316.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pollo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="558.0" layoutY="316.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/crodero.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="63.0" layoutX="669.0" layoutY="320.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/res.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="56.0" layoutX="677.0" layoutY="435.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/anguila.png" />
+               </image></ImageView>
+            <ImageView fitHeight="61.0" fitWidth="35.0" layoutX="543.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/hostiones.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="63.0" layoutX="567.0" layoutY="119.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/mano.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Combos" layoutX="-4.0" layoutY="-4.0" prefHeight="839.0" prefWidth="848.0" style="-fx-background-color: #D85723;" visible="false">
+         <children>
+            <Label layoutX="323.0" layoutY="32.0" prefHeight="29.0" prefWidth="120.0" text="Combos" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="87.0" fitWidth="99.0" layoutX="73.0" layoutY="103.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/combo1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="101.0" fitWidth="102.0" layoutX="72.0" layoutY="222.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Combo2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="108.0" layoutX="69.0" layoutY="343.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Combo3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="95.0" fitWidth="99.0" layoutX="72.0" layoutY="461.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Combo4.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="196.0" layoutY="124.0" prefHeight="46.0" prefWidth="319.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="318.0" text="Combo 1 : Pasta del gada chile bambu camaron" textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="244.0" text="chile bambu camaron pollo ostiones." textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="177.0" layoutY="234.0" prefHeight="70.0" prefWidth="319.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="317.0" text=" Combo 2 : Pasta guresa zanahoria bambu cerdo" textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="246.0" text=" Res anguila." textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="183.0" layoutY="356.0" prefHeight="46.0" prefWidth="298.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="301.0" text="Combo 3 : arroz ,apio,brocoli,pescado ,cama" textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="230.0" text=" ron,aguacate." textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <VBox layoutX="183.0" layoutY="475.0" prefHeight="70.0" prefWidth="263.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="264.0" text="combo 4 : arroz.chile.bambu,camron,cerdo,huevo" textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="243.0" text="ostiones." textFill="#0e0e0e">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+            <Button id="GenerarPedido" fx:id="AddCombo1" layoutX="532.0" layoutY="124.0" mnemonicParsing="false" onAction="#AddCombo1" prefHeight="32.0" prefWidth="108.0" text="Agregar " textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="GenerarPedido" fx:id="AddCombo2" layoutX="532.0" layoutY="234.0" mnemonicParsing="false" onAction="#AddCombo2" prefHeight="32.0" prefWidth="108.0" text="Agregar" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="GenerarPedido" fx:id="AddCombo3" layoutX="532.0" layoutY="356.0" mnemonicParsing="false" onAction="#AddCombo3" prefHeight="32.0" prefWidth="108.0" text="Agregar" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="GenerarPedido" fx:id="AddCombo4" layoutX="532.0" layoutY="475.0" mnemonicParsing="false" onAction="#AddCombo4" prefHeight="32.0" prefWidth="108.0" text="Agregar" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button id="GenerarPedido" layoutX="321.0" layoutY="613.0" mnemonicParsing="false" onAction="#SalirCombos" prefHeight="32.0" prefWidth="135.0" text="Regresar" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Pagar" layoutY="-2.0" prefHeight="837.0" prefWidth="844.0" style="-fx-background-color: #7FB3D5;" visible="false">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="192.0" layoutX="56.0" layoutY="135.0" onMouseClicked="#PagarImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes%20ordenes/pagar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="mt" layoutX="66.0" layoutY="408.0" prefHeight="30.0" prefWidth="120.0" text="Monto Total" textFill="#0e0e0e" visible="false">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="iImporte" layoutX="351.0" layoutY="410.0" prefHeight="27.0" prefWidth="192.0" text="Ingrese el Importe" textFill="#0e0e0e" visible="false">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ca" layoutX="93.0" layoutY="466.0" prefHeight="27.0" prefWidth="84.0" text="Cambio" textFill="#0e0e0e" visible="false">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Total" editable="false" layoutX="189.0" layoutY="411.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor></TextField>
+            <TextField fx:id="importe" layoutX="541.0" layoutY="411.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="cambio" editable="false" layoutX="189.0" layoutY="467.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor></TextField>
+            <Button id="GenerarPedido" fx:id="PagarBoton" layoutX="314.0" layoutY="589.0" mnemonicParsing="false" onAction="#PagarTodo" prefHeight="25.0" prefWidth="135.0" text="Cobrar" textFill="#0e0e0e" visible="false">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font></Button>
+            <ImageView fitHeight="143.0" fitWidth="154.0" layoutX="314.0" layoutY="135.0" onMouseClicked="#EditarOrden" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/editar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="143.0" fitWidth="127.0" layoutX="548.0" layoutY="135.0" onMouseClicked="#ElimniarTodo" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/eliminar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="314.0" layoutY="295.0" prefHeight="26.0" prefWidth="116.0" text="Editar orden" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label layoutX="548.0" layoutY="295.0" prefHeight="26.0" prefWidth="135.0" text="Eliminar Todo" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Label>
+            <Label layoutX="126.0" layoutY="295.0" prefHeight="20.0" prefWidth="68.0" text="Pagar" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="VolberDespuesDePagar" fitHeight="113.0" fitWidth="135.0" layoutX="622.0" layoutY="533.0" onMouseClicked="#VolberDespuesDepagar" pickOnBounds="true" smooth="false" visible="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/regresar.gif" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Pedidos" prefHeight="834.0" prefWidth="844.0" style="-fx-background-color: #7FB3D5;" visible="false">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="114.0" layoutX="616.0" layoutY="14.0" onMouseClicked="#SalirPedido" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/comanda.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="270.0" layoutY="193.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/domicilio.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="607.0" layoutY="119.0" prefHeight="22.0" prefWidth="165.0" text="Regresar a comanda" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="419.0" prefHeight="23.0" prefWidth="68.0" text="Colonia" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="309.0" layoutY="421.0" prefHeight="17.0" prefWidth="46.0" text="Calle" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font></Label>
+            <Label layoutX="507.0" layoutY="419.0" prefHeight="23.0" prefWidth="68.0" text="Avenida" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font></Label>
+            <TextField fx:id="colonia" layoutX="101.0" layoutY="417.0" prefHeight="25.0" prefWidth="165.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="calle" layoutX="355.0" layoutY="417.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="avenida" layoutX="575.0" layoutY="417.0" prefHeight="25.0" prefWidth="165.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Label layoutX="17.0" layoutY="495.0" prefHeight="23.0" prefWidth="84.0" text="N°interior" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="interior" layoutX="101.0" layoutY="493.0" prefHeight="25.0" prefWidth="165.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Label layoutX="270.0" layoutY="495.0" prefHeight="23.0" prefWidth="88.0" text="N°Exterior" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="exterior" layoutX="355.0" layoutY="493.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField fx:id="tel" layoutX="575.0" layoutY="493.0" prefHeight="25.0" prefWidth="165.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Label layoutX="539.0" layoutY="497.0" prefHeight="23.0" prefWidth="31.0" text="Tel." textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Button id="GenerarPedido" layoutX="355.0" layoutY="601.0" mnemonicParsing="false" onAction="#GenerarPedido" text="Generar Pedido" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane fx:id="Principal" layoutX="2.0" prefHeight="834.0" prefWidth="842.0">
+         <children>
+            <ImageView fitHeight="839.0" fitWidth="850.0" layoutX="-8.0" layoutY="-4.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/grande.jpg" />
+               </image>
+            </ImageView>
+            <Button id="BotonesPrincipales" layoutX="167.0" layoutY="321.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#IrAregistro" text="Ingresar Punto De Venta" textFill="#0e0e0e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button id="BotonesPrincipales" layoutX="458.0" layoutY="321.0" mnemonicParsing="false" onAction="#Findia" prefHeight="33.0" prefWidth="200.0" text="Fin Dia" textFill="#0e0e0e">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="EditarPedido" prefHeight="834.0" prefWidth="844.0" style="-fx-background-color: #D85723;" visible="false">
+         <children>
+            <RadioButton fx:id="PastaDD" layoutX="18.0" layoutY="116.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="154.0" text="Pasta Delgada 15$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="RadiobuttonPastaArroz_1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="Arrozz" layoutX="330.0" layoutY="116.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Arroz 10$" textFill="#0f0f0f" toggleGroup="$RadiobuttonPastaArroz_1">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <CheckBox fx:id="apio1" layoutX="131.0" layoutY="431.0" mnemonicParsing="false" text="Apio 3$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="zanahoria1" layoutX="235.0" layoutY="431.0" mnemonicParsing="false" text="Zanahoria 3.5$" textFill="#0f0f0f" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cebolla1" layoutX="18.0" layoutY="357.0" mnemonicParsing="false" text="Cebolla 2$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="chile1" layoutX="235.0" layoutY="357.0" mnemonicParsing="false" text="Chile 2$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <Text fill="#261616" strokeType="OUTSIDE" strokeWidth="0.0" text="VERDURAS" textAlignment="CENTER" wrappingWidth="119.99999284744263">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Text>
+            <CheckBox fx:id="calabaza1" layoutX="131.0" layoutY="357.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Calabaza 7$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="berenjena1" layoutX="235.0" layoutY="268.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="116.0" text="Berenjena 4$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="hongos1" layoutX="131.0" layoutY="270.0" mnemonicParsing="false" text="Hongo 3$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="bambu1" layoutX="18.0" layoutY="270.0" mnemonicParsing="false" text="Bambu 12.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="brocoli1" layoutX="18.0" layoutY="431.0" mnemonicParsing="false" text="Brocoli 5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="TOPI" textAlignment="CENTER" wrappingWidth="103.00001263618469">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="huevo1" layoutX="154.0" layoutY="607.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Huevo 13$" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="topi1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="aguacate1" layoutX="18.0" layoutY="607.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="116.0" text="Aguacate 15$" textFill="#0f0f0f" toggleGroup="$topi1">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="346.0" layoutY="659.0" mnemonicParsing="false" onAction="#GuardarCambios" prefHeight="25.0" prefWidth="149.0" text="Guardar Cambios" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROTEINAS" textAlignment="CENTER" wrappingWidth="119.99998158216476">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="Camaron1" layoutX="572.0" layoutY="268.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" text="Camaron 20$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Pescado1" layoutX="456.0" layoutY="268.0" mnemonicParsing="false" text="Pescado 13$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Res1" layoutX="687.0" layoutY="268.0" mnemonicParsing="false" text="Res 19$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Cordero1" layoutX="456.0" layoutY="346.0" mnemonicParsing="false" text="Cordero 12.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Cerdo1" layoutX="687.0" layoutY="346.0" mnemonicParsing="false" text="Cerdo 15$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="Pollo1" layoutX="572.0" layoutY="346.0" mnemonicParsing="false" text="Pollo 18.5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </CheckBox>
+            <RadioButton fx:id="ostiones1" layoutX="529.0" layoutY="503.0" mnemonicParsing="false" text="Ostiones 5$" textFill="#0f0f0f">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="salsa_1" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="anguila1" layoutX="679.0" layoutY="503.0" mnemonicParsing="false" text="Anguila 6$" textFill="#0f0f0f" toggleGroup="$salsa_1">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <Text fill="#0e0e0e" layoutX="611.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALSA" textAlignment="CENTER" wrappingWidth="68.00000667572021">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="Servicios1" prefHeight="25.0" prefWidth="154.0" visible="false" />
+            <Label layoutX="528.0" layoutY="564.0" prefHeight="20.0" prefWidth="88.0" text="SERVICIO" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="PastaGG" layoutX="173.0" layoutY="116.0" mnemonicParsing="false" text="Pasta Gruesa 13.5$" textFill="#0f0f0f" toggleGroup="$RadiobuttonPastaArroz_1">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </RadioButton>
+            <ComboBox fx:id="Servicios1" layoutX="621.0" layoutY="561.0" prefWidth="150.0" promptText="SERVICIOS">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <ImageView fitHeight="61.0" fitWidth="88.0" layoutX="195.0" layoutY="49.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pasta.jpg" />
+               </image>
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="88.0" layoutX="33.0" layoutY="49.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pasta.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="88.0" layoutX="349.0" layoutY="49.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Arroz.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="156.0" layoutY="375.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/apio.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="63.0" layoutX="248.0" layoutY="289.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/chile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="74.0" layoutX="38.0" layoutY="297.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/cebollas.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="34.0" layoutY="375.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/brocoli.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="38.0" layoutY="207.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/bambu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="88.0" layoutX="251.0" layoutY="211.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/berenjena.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="147.0" layoutY="207.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/hongos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="84.0" layoutX="154.0" layoutY="293.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/Calabaza.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="75.0" layoutX="256.0" layoutY="382.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/zanahoria.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="181.0" layoutY="549.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/huevos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="75.0" layoutX="40.0" layoutY="545.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/aguacate.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="63.0" layoutX="478.0" layoutY="289.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/cerdo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="71.0" layoutX="589.0" layoutY="222.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/camaron.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="71.0" layoutX="474.0" layoutY="222.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pescado.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="598.0" layoutY="297.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/pollo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="63.0" layoutX="708.0" layoutY="297.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/crodero.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="46.0" fitWidth="63.0" layoutX="708.0" layoutY="222.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/res.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="56.0" layoutX="696.0" layoutY="431.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/anguila.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="35.0" layoutX="563.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@imagenes/hostiones.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="584.0" layoutY="168.0" text="PROTEINAS" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="114.0" layoutY="155.0" text="VERDURAS" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="484.0" text="TOPI" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="12.0" text="PASTAS Y ARROZ" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="VerOrdenes" layoutY="-3.0" prefHeight="837.0" prefWidth="844.0" style="-fx-background-color: #7FB3D5;" visible="false">
+         <children>
+            <TextArea fx:id="ListaOrdenes" editable="false" layoutX="366.0" layoutY="64.0" prefHeight="773.0" prefWidth="478.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TextArea>
+            <Label layoutX="21.0" layoutY="154.0" text="Ingrese el numero de orden" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="OrdenABorrar" layoutX="247.0" layoutY="153.0" prefWidth="108.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <ImageView fitHeight="70.0" fitWidth="71.0" layoutX="36.0" layoutY="286.0" onMouseClicked="#EliminarProducto" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/eliminarorden%20en%20especifico.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+            <ImageView fitHeight="79.0" fitWidth="74.0" layoutX="245.0" layoutY="282.0" onMouseClicked="#AddProducto" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/agregaer%20producto.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="369.0" prefHeight="17.0" prefWidth="127.0" text="Eliminar una orden" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></Label>
+            <Label layoutX="198.0" layoutY="369.0" text="Agregar Algun Producto" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></Label>
+            <ImageView fitHeight="79.0" fitWidth="226.0" layoutX="56.0" layoutY="567.0" onMouseClicked="#ReturnACaja" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@imagenes%20ordenes/Regresarapagar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="542.0" layoutY="29.0" text="ORDENES" textFill="#0e0e0e">
+               <font>
+                  <Font name="Arial Black" size="19.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
